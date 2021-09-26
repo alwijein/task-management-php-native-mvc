@@ -8,7 +8,7 @@ class AuthMiddleware implements Middleware {
     {
         session_start();
         if(!isset($_SESSION['user'])){
-            header('location: /login');
+            header('location: /');
             exit();
         }
     }

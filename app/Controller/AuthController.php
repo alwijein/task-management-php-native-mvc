@@ -5,22 +5,26 @@ namespace AlwiJaya\TugasBesarWeb\Controller;
 use AlwiJaya\TugasBesarWeb\App\View;
 
 
-class AuthController extends View{
+class AuthController extends View
+{
 
 
-    public function index(): void {
+    public function index(): void
+    {
 
         View::render('Auth/login');
     }
 
-    public function register(): void {
+    public function register(): void
+    {
 
         View::render('Auth/register');
     }
 
-    public function storeRegister(){
+    public function storeRegister()
+    {
         //Process form
-        
+
         //Sanitize POST data
         $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
@@ -70,53 +74,53 @@ class AuthController extends View{
         $data['userPwd'] = password_hash($data['userPwd'], PASSWORD_DEFAULT);
 
         //Register User
-        if($this->model('UserModel')->register($data)){
+        if ($this->model('UserModel')->register($data)) {
             header('location: /');
             exit();
-        }else{
+        } else {
             die("Something went wrong");
         }
     }
 
-    function login(): void {
-        
+    function login(): void
+    {
+
         $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
 
-        $data=[
+        $data = [
             'username' => trim($_POST['username']),
             'userPwd' => trim($_POST['userPwd'])
         ];
 
-        if(empty($data['username']) || empty($data['userPwd'])){
+        if (empty($data['username']) || empty($data['userPwd'])) {
             // flash('login','please fill out all inputs');
-            header('location: /login');
+            header('location: /');
             exit();
         }
 
-        if($this->model('UserModel')->findUserByUsername($data['username'])){
+        if ($this->model('UserModel')->findUserByUsername($data['username'])) {
             $loggedInUser = $this->model('UserModel')->login($data['username'], $data['userPwd']);
-            if($loggedInUser){
+            if ($loggedInUser) {
                 $this->createUserSession($loggedInUser);
-            }else{
-                flash("login", "Password Incorrect");
-                redirect("/login");
+            } else {
+                header('location: /');
+                exit();
             }
-        }else{
-            flash("login", "No user found");
-            redirect("login.php");
+        } else {
+            header('location: /');
+            exit();
         }
-        
+
         // echo "SUKSES";
     }
 
-    public function createUserSession($user): void{
-        $_SESSION['id_user'] = $user->id_user;
-        $_SESSION['username'] = $user->username;
+    public function createUserSession($user): void
+    {
+        // $_SESSION['id_user'] = $user->id_user;
+        // $_SESSION['username'] = $user->username;
 
-        header('location: /');
+        header('location: /home');
         exit();
     }
-
-
 }

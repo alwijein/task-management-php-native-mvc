@@ -26,13 +26,11 @@
 <body>
 
 
-  <div class="row w-100">
-    <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
+  <div class="row w-100 h-100">
+    <div class="d-lg-flex col-lg-8 align-items-center p-5">
       <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/app-assets/images/pages/login-v2.svg" alt="Login V2" /></div>
     </div>
-    
-
-    <div class="d-lg-flex col-lg-4 align-items-center p-5 bg-white">
+    <div class=" d-flex col-lg-4 align-items-center p-5 bg-white">
       <div class="col-12 mx-auto">
         <h2 class="card-title mb-4">Welcome to ICWorks 👋</h2>
         <p class="card-text mb-2">Please sign-in to your account and start the your work</p>

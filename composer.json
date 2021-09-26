@@ -1,0 +1,20 @@
+{
+    "name": "alwi-jaya/tugas-besar-web",
+    "description": "Tugas Besar Web",
+    "type": "project",
+   
+    "autoload": {
+        "psr-4": {
+            "AlwiJaya\\TugasBesarWeb\\": "app"
+        }
+    },
+    "authors": [
+        {
+            "name": "alwijein",
+            "email": "alwijein@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : ">=8"
+    }
+}

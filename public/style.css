@@ -1,0 +1,293 @@
+:root {
+    --scaffoldColor : #F3F3F3;
+    --primaryColor : #26C5D8;
+    --textColor : #6E6B7B;
+}
+
+
+html, body { 
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:100%;
+    background-color: var(--scaffoldColor) !important;
+}
+
+body a {
+ text-decoration: none;
+ color: var(--textColor);   
+}
+
+body a:hover {
+    color: var(--primaryColor);
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+.btn-primary {
+    background-color: var(--primaryColor) !important;
+    border: none !important;
+}
+
+.btn-secondary {
+    color: var(--primaryColor) !important;
+    border: none !important;
+    background-color: transparent !important;
+}
+
+
+.bg-light-blue {
+    background-color: #00d1e828;
+    color: #26C5D8;
+}
+
+.bg-light-green {
+    background-color: #30b76825;
+    color: #30B769;
+}
+
+.bg-light-red {
+    background-color: #e80f0028;
+    color: #E80E00;
+}
+
+.bg-light-yellow {
+    background-color: #e8a60025;
+    color: #E8A700;
+}
+
+.main-menu {
+    height: 100%;
+    position: fixed;
+    width: 20%;
+    background-color: white;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+
+.dashboard {
+    padding: 5px 0px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.dashboard a {
+    color: var(--textColor);
+    font-size: 1rem;
+    margin: 0px 10px;
+}
+
+.dashboard a:hover{
+    color: white;
+    background-color: var(--primaryColor);
+    padding: 5px 20px;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.dashboard a.active{
+    color: white;
+    background-color: var(--primaryColor);
+    padding: 5px 20px;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.menu-title {
+    color: var(--textColor);
+    font-size: 1rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.content-container {
+    padding-top: 30px;
+    margin-left: 22%;
+    margin-right: 40px;
+}
+
+.nav-bar {
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.nav-bar img {
+    margin: 10px;
+    width: 4%;
+    height: 4%;
+    position: relative;
+}
+
+
+
+.user-profile {
+    background-color: var(--primaryColor);
+    border-radius: 50%;
+    width: auto;
+}
+
+.medal-container {
+    padding: 40px;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    height: 35vh;
+}
+
+.medal-container h3 {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.medal-container span {
+    align-items: center;
+    font-size: 48px;
+    color: var(--primaryColor);
+    font-weight: bold;
+}
+
+.info-container {
+    padding: 40px;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: start;
+    height: 35vh;
+}
+
+.info-container h3 {
+    font-size: 20px;
+    padding-bottom: 43px;
+}
+
+.badge-pills {
+    white-space: nowrap;
+    position: relative;
+    padding: 15px;
+    margin-right: 10px;
+    border-radius: 50%;
+    height: 100%;
+    font-size: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    display: -webkit-inline-flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.badge-text {
+    padding-top: 10px;
+    margin-right: 5px;
+}
+
+.badge-text h4 {
+    font-size: 1.2rem;
+}
+
+.badge-text p {
+    font-size: 0.7rem;
+}
+
+
+/* Task Content */
+
+.form-task {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white
+}
+
+.task-container {
+    border-radius: 10px;
+    background-color: white;
+}
+
+.task-container .task-head {
+    display: flex;
+    justify-content: center;
+    background-color: #26c6d81f;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.task-container .task-head img {
+    height: 27vh;
+    margin-top: 20px;
+}
+
+.task-container .task-body {
+    margin: 20px;
+    color: var(--textColor);
+}
+
+.task-container .task-body .badge-pills {
+    margin-left: 10px;
+    border-radius: 10%;
+    padding: 5px;
+}
+
+.task-container .task-body .badge-text {
+    padding: 0px;
+}
+
+.task-container .task-body .badge-text h4 {
+    font-size: 1rem;
+}
+
+.badge-text a:hover {
+    text-decoration: none !important;
+    color: var(--textColor) !important;
+}
+
+.task-container .task-body .badge-text p {
+    font-size: 0.8rem;
+}
+
+.profile-img {
+    margin: 10px;
+    width: 15%;
+    height: 15%;
+}
+
+/* Users Management */
+
+.card-1 {
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #fff
+}
+
+.icons i {
+    margin-left: 20px
+}
+
+
+/* Login */
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--textColor);
+}
+
+.card-text {
+    font-size: 1rem;
+    color: var(--textColor);
+
+}
+
